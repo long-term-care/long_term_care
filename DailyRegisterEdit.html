@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Register Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="DailyRegisterEdit.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="insideBox">
+            <h3>(單位名稱)   C單位巷弄長照站-每日登記表</h3>
+            <div class="ElderIDInput">
+                長者編號: <input type="text" name="ElderId" id="ElderId">
+            </div>
+
+            <hr>
+
+            <div class="GiantBox">
+                <div class="title">
+                    <div class="row header">
+                        <div class="col-1">日期</div>
+                        <div class="col-2">體溫/脈搏</div>
+                        <div class="col-2">接送需求</div>
+                        <div class="col-3">血壓檢測值</div>
+                        <div class="col-4">(14天內)COVID-19 建議注意事項</div>
+                    </div>
+                </div>
+                <div class="container"> <!-- Each data rows-->
+                    <div class="row tBody">
+                        <div class="col-1">
+                            <div class="group">
+                                <input type="text" class="transparent-input" required>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="group">
+                                <input type="text" class="transparent-input" required>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <fieldset>
+                                <div class="group">
+                                    <input type="radio" name="pickUp" id="morning">
+                                    <label for="morning">上午</label>
+                                </div>
+                                <div class="group">
+                                    <input type="radio" name="pickUp" id="afternoon">
+                                    <label for="afternoon">下午</label>
+                                </div>
+                                <div class="group">
+                                    <input type="radio" name="pickUp" id="non">
+                                    <label for="non">&nbsp;&nbsp;&nbsp;無</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-3" style="font-size: 13.4px;">
+                            <fieldset>
+                                <div class="group">
+                                    <input type="radio" name="bloodPressure" id="normal">
+                                    <label for="normal">正常(120/80mmHg以下)</label>
+                                </div>
+                                <div class="group">
+                                    <input type="radio" name="bloodPressure" id="preHigh">
+                                    <label for="preHigh">高血壓前期(120/80-135/85mmHg以下)</label>
+                                </div>
+                                <div class="group">
+                                    <input type="radio" name="bloodPressure" id="crisis">
+                                    <label for="crisis">高血壓危險群(135/85mmHg以上)</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-4" style="font-size: 15px;">
+                            <fieldset>
+                                <div class="group">
+                                    <input type="radio" name="covid" id="tour">
+                                    <label for="tour">有出國史</label>
+                                </div>
+                                <div class="group">
+                                    <input type="radio" name="covid" id="notTour">
+                                    <label for="notTour">無出國史</label>
+                                </div>
+                                <div class="group">
+                                    <input type="radio" name="covid" id="symptoms">
+                                    <label for="symptoms">有上呼吸道症狀或發燒</label>
+                                </div>
+                                <div class="group">
+                                    <input type="radio" name="covid" id="notSymptoms">
+                                    <label for="notSymptoms">無上呼吸道症狀或發燒</label>
+                                </div>
+                            </fieldset>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>

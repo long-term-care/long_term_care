@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elder Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="ElderSearchEdit.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="insideBox">
+            <h3>社區長者需求調查</h3>
+            <div class="content">
+                <div class="ElderIDInput">
+                    長者編號: <input type="text" name="ElderId" id="ElderId">
+                </div>
+                <form>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            (中)低收入戶:&nbsp;
+                            <input type="radio" name="salary" id="lowIncome">
+                            <label for="lowIncome">是</label>
+                            <input type="radio" name="salary" id="normal">
+                            <label for="normal">否</label>
+                        </div>
+                        <div class="col">
+                            識字:&nbsp;
+                            <input type="radio" name="knowledge" id="readable">
+                            <label for="readable">是</label>
+                            <input type="radio" name="knowledge" id="illiteracy">
+                            <label for="illiteracy">否</label>
+                        </div>
+                        <div class="col">
+                            居住情形:&nbsp;
+                            <input type="radio" name="home" id="alone">
+                            <label for="alone">是</label>
+                            <input type="radio" name="home" id="together">
+                            <label for="together">否</label>
+                        </div>
+                        <h6 style="padding-top: 10px;">健康狀況</h6>
+                        <div class="col">
+                            <ul>
+                                <li>意識清楚:&nbsp;
+                                    <input type="radio" name="consciousness" id="Cclear">
+                                    <label for="Cclear">是</label>
+                                    <input type="radio" name="home" id="confusion">
+                                    <label for="confusion">否</label>
+                                </li>
+                                <li>說話清楚:&nbsp;
+                                    <input type="radio" name="speak" id="Sclear">
+                                    <label for="Sclear">是</label>
+                                    <input type="radio" name="speak" id="ambiguous">
+                                    <label for="ambiguous">否</label>
+                                </li>
+                                <li>協助行動:&nbsp;
+                                    <input type="radio" name="assist" id="NoAssist">
+                                    <label for="NoAssist">是</label>
+                                    <input type="radio" name="assist" id="Aclear">
+                                    <label for="Aclear">否</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>視力:&nbsp;
+                                    <input type="radio" name="vision" id="Vclear">
+                                    <label for="Vclear">清楚</label>
+                                    <input type="radio" name="vision" id="farsighted">
+                                    <label for="farsighted">有點老花</label>
+                                    <input type="radio" name="vision" id="presbyopia">
+                                    <label for="presbyopia">很模糊</label>
+                                </li>
+                                <li>聽力:&nbsp;
+                                    <input type="radio" name="listen" id="Lclear">
+                                    <label for="Lclear">清楚</label>
+                                    <input type="radio" name="listen" id="deafSoon">
+                                    <label for="deafSoon">有點重聽</label>
+                                    <input type="radio" name="listen" id="deaf">
+                                    <label for="deaf">重聽</label>
+                                </li>
+                                <li>進食:&nbsp;
+                                    <input type="radio" name="Feed" id="independence">
+                                    <label for="independence">獨立</label>
+                                    <input type="radio" name="Feed" id="Help">
+                                    <label for="Help">需餵食</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            服藥情形:&nbsp;
+                            <input type="radio" name="med" id="took">
+                            <label for="took">是</label>
+                            <input type="radio" name="med" id="notTaken">
+                            <label for="notTaken">否</label>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            自我照顧:&nbsp;
+                            <input type="radio" name="selfCare" id="self">
+                            <label for="self">沒問題</label>
+                            <input type="radio" name="selfCare" id="halfRely">
+                            <label for="halfRely">部分依賴</label>
+                            <input type="radio" name="selfCare" id="Rely">
+                            <label for="Rely">完全依賴</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <hr>
+                    <br/>
+                    <section>
+                        <p>對成立C單位巷弄長照站的看法（若有另外想法請加描述）</p>
+                        <div class="question">
+                            一、如果○○C單位巷弄長照站，您贊成嗎？
+                            <input type="checkbox" id="Q1Y" name="Q1Y">
+                            <label for="Q1Y">贊成</label> 
+                            <input type="checkbox" id="Q1N" name="Q1N">
+                            <label for="Q1N">不贊成：<input type="text" id=""></label>
+                        </div>
+                        <div class="question">
+                            二、是否喜歡與其他老人一起聊天、活動？
+                            <input type="checkbox" id="Q2Y" name="Q2Y">
+                            <label for="Q2Y">是</label>
+                            <input type="checkbox" id="Q2N" name="Q2N">
+                            <label for="Q2N">否</label>
+                        </div>
+                        <div class="question">
+                            三、每天在家中生活情形？
+                            <input type="checkbox" id="Q3v1" name="Q3v1">
+                            <label for="Q3v1">忙碌</label>
+                            <input type="checkbox" id="Q3v2" name="Q3v2">
+                            <label for="Q3v2">熱鬧</label>
+                            <input type="checkbox" id="Q3v3" name="Q3v3">
+                            <label for="Q3v3">無聊</label>
+                            <input type="checkbox" id="Q3v4" name="Q3v4">
+                            <label for="Q3v4">孤寂</label>
+                        </div>
+                        <div class="question">
+                            四、在家裡如何吃中餐？
+                            <input type="checkbox" id="Q4v1" name="Q4v1">
+                            <label for="Q4v1">家人預備</label>
+                            <input type="checkbox" id="Q4v2" name="Q4v2">
+                            <label for="Q4v2">自己煮</label>
+                            <input type="checkbox" id="Q4v3" name="Q4v3">
+                            <label for="Q4v3">外食</label>
+                            <input type="checkbox" id="Q4v4" name="Q4v4">
+                            <label for="Q4v4">其他: <input type="text" id=""></label>
+                        </div>
+                        <div class="question">
+                            五、您可以自行前往活動地點嗎？
+                            <input type="checkbox" id="Q5v1" name="Q5v1">
+                            <label for="Q5v1">可以</label>
+                            <input type="checkbox" id="Q5v2" name="Q5v2">
+                            <label for="Q5v2">需家人親友載往</label>
+                            <input type="checkbox" id="Q5v3" name="Q5v3">
+                            <label for="Q5v3">需志工協助</label>
+                        </div>
+                        <div class="question">
+                            六、您喜歡的活動：
+                            <input type="checkbox" id="Q6v1" name="Q6v1">
+                            <label for="Q6v1">開講</label>
+                            <input type="checkbox" id="Q6v2" name="Q6v2">
+                            <label for="Q6v2">唱卡拉OK</label>
+                            <input type="checkbox" id="Q6v3" name="Q6v3">
+                            <label for="Q6v3">唱歌</label>
+                            <input type="checkbox" id="Q6v4" name="Q6v4">
+                            <label for="Q6v4">剪紙</label>
+                            <input type="checkbox" id="Q6v5" name="Q6v5">
+                            <label for="Q6v5">拉弦仔</label>
+                            <input type="checkbox" id="Q6v6" name="Q6v6">
+                            <label for="Q6v6">書法</label>
+                            <input type="checkbox" id="Q6v7" name="Q6v7">
+                            <label for="Q6v7">團體遊戲、競賽</label>
+                            <input type="checkbox" id="Q6v8" name="Q6v8">
+                            <label for="Q6v8">搥球</label>
+                            <input type="checkbox" id="Q6v9" name="Q6v9">
+                            <label for="Q6v9">其他：</label><input type="text" class="others">
+                        </div>
+                        <div class="question">
+                            七、您個人會的傳統技藝有：
+                            <input type="text" id="">&nbsp;若有，您願意在C單位中將您會的傳統技藝分享出來嗎？
+                            <input type="checkbox" id="Q7v1" name="Q7v1">
+                            <label for="Q7v1">一定會</label>
+                            <input type="checkbox" id="Q7v2" name="Q7v2">
+                            <label for="Q7v2">不一定</label>
+                            <input type="checkbox" id="Q7v3" name="Q7v3">
+                            <label for="Q7v3">不會</label>
+                        </div>
+                        <div class="question">
+                            八、如果需繳交活動費、伙食費（每週2個上午含點心或午餐），您認為每個月多少錢可接受? 
+                            <input type="text" id="">
+                        </div>
+                        <div class="question">
+                            九、您本人會來參加C單位巷弄長照站的活動嗎？
+                            <input type="checkbox" id="Q9Y" name="Q9Y">
+                            <label for="Q9Y">會</label>
+                            <input type="checkbox" id="Q9N" name="Q9N">
+                            <label for="Q9N">不會:&nbsp;<input type="text"></label>
+                        </div>
+                    </section>
+                    <div class="wrap">
+                        <button class="button">返回</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() {
+        $('.question input[type="checkbox"]').change(function() {
+          $(this).siblings('input[type="checkbox"]').prop('checked', false);
+        });
+      });
+    </script>
+</body>
+</html>
