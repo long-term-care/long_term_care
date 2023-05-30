@@ -1,0 +1,68 @@
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'WenQuanYi Zen Hei', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+}
+h5{
+    font-size: 18px;
+}
+.container-fluid {
+    background-color: #CBE9EA;
+}
+div.col-md-12 {
+    text-align: center;
+}
+.row1 .col-md-12, .row2 .col-md-12 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.row1 {
+    padding: 20px 50px 0 50px;
+}
+.row2 {
+    padding: 20px 50px 20px 50px;
+}
+.row1 .card { 
+    width: 274px;
+}
+.row2 .card {
+    width: 180px;
+}
+.row1 .card, .row2 .card {
+    border-radius: 15px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row1 .head {
+    background-color: #51B2DC;
+    color: white;
+}
+.row2 .head {
+    background-color: #D04667;
+    color: white;
+} 
+.card:hover:not(.head) {
+    transform: scale(1.06);
+    transition: 0.5s;
+}
+.row1 .card .card-body h5, .row2 .card .card-body h5 {
+   padding-top: 30px;
+}
+.schedule {
+    padding: 15px 0 0 15px;
+    display: flex;
+    background-color: #3D81BF;
+    color: white;
+    width: 700px;
+}
+.scheduleBox {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+.scheduleBox .pics {
+    padding-top: 5px;
+}
+

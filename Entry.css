@@ -1,0 +1,80 @@
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'WenQuanYi Zen Hei', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+    background-color: #CBE9EA;
+}
+.wrap {
+    margin: 30px;
+}
+.Home {
+    display: inline-flex;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    min-height: 50px;
+    padding: 0 30px;
+    font-size: 17px;
+    z-index: 1;
+    position: relative;
+}
+.Home::before {
+    width: 50px;
+    height: 1px;
+    margin-right: 20px;
+}
+.Home::before, .Home::after {
+    content: "";
+    background-color: #FFFFFF;
+    display: block;
+}
+.Home:hover {
+    color: #305cb9;
+    text-decoration: none;
+}
+.Home:hover::before, .Home:hover {
+    background-color: #305cb9;
+}
+.Home::after {
+    width: 0%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+}
+.Home:hover::after {
+    width: 100%;
+}
+.Home:hover::before, .Home:hover, .Home::after {
+    transition: all 0.45s ease-out;
+}
+.wrap_Entry {
+    margin: auto;
+    text-align: center;
+}
+.wrap_Entry > button {
+    margin: 70px;
+}
+.Edit, .View {
+    transition: all 0.3s ease-in-out;
+} 
+.Edit, .View {
+    font-size: 34px;
+    width: 280px;
+    height: 170px;
+    border-radius: 50px;
+    /* background-image: linear-gradient(135deg, #b192fe 0%, #FBD4DF 100%); */
+    background-color: #FBD4DF;
+    box-shadow: 0 20px 30px -6px rgba(64, 153, 201, 0.5);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+.Edit:hover, .View:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+.Edit:active, .View:active {
+    opacity: 0.5;
+}
