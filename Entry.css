@@ -55,10 +55,9 @@ body {
 .wrap_Entry > button {
     margin: 70px;
 }
+
 .Edit, .View {
     transition: all 0.3s ease-in-out;
-} 
-.Edit, .View {
     font-size: 34px;
     width: 280px;
     height: 170px;

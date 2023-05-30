@@ -20,111 +20,141 @@
     <!-- messageBox -->
     <div id="volunteerMsgBox" class="hidden">
         <div class="container">
-            <h3>註冊</h3>
+            <div class="title">
+                <h3>註冊</h3>
+                <div class="knownAs">
+                    <p>照護人員</p>
+                </div>
+                <button class="closeMessageBox" id="close" type="submit">&#x2716;</button>
+            </div>
             <hr>
-            <div class="row">
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位編號">
-                </div>
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;員工證號碼">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;姓氏">
-                </div>
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;名字">
-                </div>
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-            </div>
-            <h5>出生日期</h5>
-            <div class="row">
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-                <div class="col-3">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;身分證">
-                </div>
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;電話">
-                </div>
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;手機">
-                </div>
-            </div> 
-            <div class="row">
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;專長">
-                </div>
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;密碼">
-                </div>
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;密碼確認">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <input type="text" placeholder="&nbsp;&nbsp;服務據點">
-                </div>
-                <div class="col-6">
-                    <input type="text" placeholder="&nbsp;&nbsp;地址">
-                </div>
-                <div class="col-2">
-                    <input type="text" placeholder="&nbsp;&nbsp;單位名稱">
-                </div>
-            </div>
-            <div class="box">
-                <div class="boxL">
-                    <div class="row">
-                        <div class="col6">
-                            <h6>證照</h6>
-                            <input type="text" class="boxes">
-                        </div>
-                        <div class="col6">
-                            <h6>提供服務</h6>
-                            <input type="text" class="boxes">
-                        </div>
+            <form>
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="&nbsp;&nbsp;單位名稱" required>
                     </div>
-                    <div class="row">
-                        <div class="col6">
-                            <h6>加入動機</h6>
-                            <input type="text" class="boxes">
-                        </div>
-                        <div class="col6">
-                            <h6>服務紀錄</h6>
-                            <input type="text" class="boxes">
-                        </div>
+                    <div class="col-4">
+                        <input type="number" placeholder="&nbsp;&nbsp;單位編號" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" placeholder="&nbsp;&nbsp;員工證號碼" required>
                     </div>
                 </div>
-                <div class="boxR">
-                    <h6>經驗</h6>
-                    <input type="text" id="exp">
+                <div class="row">
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;姓氏" required>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;名字" required>
+                    </div>
+                    <div class="col-3">
+                        <select id="gender" required>
+                            <option value="na">性別</option>
+                            <option value="male">男</option>
+                            <option value="female">女</option>   
+                        </select>             
+                    </div>
+                    <div class="col-3">
+                        <select id="educationLevel" required>
+                            <option value="na">教育程度</option>
+                            <option value="illiteracy">不識字</option>
+                            <option value="self-study">自修</option>
+                            <option value="elementary">國小</option>
+                            <option value="junior-high">國中</option>
+                            <option value="seniorORvocational-high">高中職</option>
+                            <option value="junior-college">專科</option>
+                            <option value="university">大學</option>
+                            <option value="graduate">研究所以上</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
+                <h6>出生日期</h6>
+                <div class="row">
+                    <div class="col-3">
+                        <select id="yearSelect" required></select>
+                    </div>
+                    <div class="col-3">
+                        <select id="monthSelect" required></select>
+                    </div>
+                    <div class="col-3">
+                        <select id="daySelect" required></select>
+                    </div>
+                    <div class="col-3">
+                        <select id="list" required>
+                            <option value="na">身份別</option>
+                            <option value="Low-income">低收入戶</option>
+                            <option value="near-poor">中低收入戶</option>
+                            <option value="normal">一般戶老人</option>
+                            <option value="solitary">獨居老人</option>
+                            <option value="handicapped">身心障礙者</option>
+                            <option value="others">其他</option>
+                        </select>                
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="&nbsp;&nbsp;身分證" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="tel" placeholder="&nbsp;&nbsp;電話" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="tel" placeholder="&nbsp;&nbsp;手機" required>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="&nbsp;&nbsp;專長" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="password" placeholder="&nbsp;&nbsp;密碼" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="password" placeholder="&nbsp;&nbsp;密碼確認" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="&nbsp;&nbsp;服務據點" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" placeholder="&nbsp;&nbsp;地址" required>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" placeholder="&nbsp;&nbsp;單位名稱" required>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="boxL">
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <h6>證照</h6>
+                                <input type="text" class="boxes" required>
+                            </div>
+                            <div class="grid-item">
+                                <h6>提供服務</h6>
+                                <input type="text" class="boxes" placeholder="&nbsp;&nbsp;簡短概述" required>
+                            </div>
+                            <div class="grid-item">
+                                <h6>加入動機</h6>
+                                <input type="text" class="boxes" placeholder="&nbsp;&nbsp;簡短概述" required>
+                            </div>
+                            <div class="grid-item">
+                                <h6>服務紀錄</h6>
+                                <input type="text" class="boxes" required>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="boxR">
+                        <h6>經驗</h6>
+                        <input type="text" id="exp" required>
+                    </div>
+                </div>
+                <div class="vReadyToSubmit">
+                    <button class="closeMessageBox" type="submit">註冊</button>
+                </div>
+            </form>
         </div>
-        <button class="closeMessageBox">註冊test1</button>
     </div>
 
     
