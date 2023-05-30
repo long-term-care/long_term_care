@@ -82,6 +82,70 @@ body, html {
     z-index: 10000; /* Ensure the message box appears on top of the overlay */
 }
 
+/* RegisterPage */
+
+/* Elder */
+.large {
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+}
+.container {
+    position: relative;
+    /* background-color: #CBE9EA; */
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.row {
+    margin: 15px 0;
+}
+input {
+    position: relative;
+    height: 50px;
+    background: rgba(240, 236, 236, 0.68);
+    border: 1px solid #686868;
+    border-radius: 10px;
+}
+input:not(.boxes) {
+    width: 90%;
+}
+input.boxes {
+    width: 40%;
+}
+.box {
+    display: flex;
+    flex-direction: row;
+}
+.boxL {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    width: 70%;
+}
+.boxR {
+    float: right;
+}
+.boxR #exp {
+    width: 400px;
+    height: 150px;
+}
+h6 {
+    font-size: 10px;
+}
+.container:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    content: "\00d7"; 
+    font-weight: 300;
+}
+button.closeMessageBox {
+    
+}
+
 
 
 

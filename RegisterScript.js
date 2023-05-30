@@ -8,6 +8,7 @@ $(document).ready(function() {
         // Show message box
         $('#volunteerMsgBox').removeClass('hidden');
         $('#elderMsgBox').addClass('hidden');
+        $('#volunteerMsgBox').addClass('large'); 
         $('body').append('<div class="translucent-overlay"></div>');
         // Hide the button
         $(this).hide();
@@ -21,6 +22,7 @@ $(document).ready(function() {
         // Show message box
         $('#elderMsgBox').removeClass('hidden'); 
         $('#volunteerMsgBox').addClass('hidden'); 
+        $('#elderMsgBox').addClass('large'); 
         $('body').append('<div class="translucent-overlay"></div>');
         // Hide the button
         $(this).hide();
