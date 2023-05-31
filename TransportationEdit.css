@@ -50,6 +50,9 @@ input[type="text"] {
     height: 25px;
     border-radius: 8px;
 }
+input:focus {
+    outline: none;
+}
 .header {
     height: 30px;
     margin-top: 20px;

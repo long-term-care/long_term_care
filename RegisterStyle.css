@@ -199,6 +199,8 @@ input:not(.boxes), select {
 .closeMessageBox:active:not(#close) {
     opacity: 0.6;
 }
-
+input:focus, select:focus {
+    outline: none;
+}
 
 
