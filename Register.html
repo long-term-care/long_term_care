@@ -18,6 +18,8 @@
 
 
     <!-- messageBox -->
+    
+    <!-- Volunteer -->
     <div id="volunteerMsgBox" class="hidden">
         <div class="container">
             <div class="title">
@@ -28,7 +30,7 @@
                 <button class="closeMessageBox" id="close" type="submit">&#x2716;</button>
             </div>
             <hr>
-            <form>
+            <form class="volunteer">
                 <div class="row">
                     <div class="col-4">
                         <input type="text" placeholder="&nbsp;&nbsp;單位名稱" required>
@@ -68,16 +70,18 @@
                         </select>
                     </div>
                 </div>
-                <h6>出生日期</h6>
+                <div class="col-12">
+                    <h6>出生日期</h6>
+                </div>
                 <div class="row">
                     <div class="col-3">
-                        <select id="yearSelect" required></select>
+                        <select class="yearSelect" required></select>
                     </div>
                     <div class="col-3">
-                        <select id="monthSelect" required></select>
+                        <select class="monthSelect" required></select>
                     </div>
                     <div class="col-3">
-                        <select id="daySelect" required></select>
+                        <select class="daySelect" required></select>
                     </div>
                     <div class="col-3">
                         <select id="list" required>
@@ -157,14 +161,228 @@
         </div>
     </div>
 
-    
+    <!-- Elder -->
     <div id="elderMsgBox" class="hidden">
-        <input type="text" placeholder="Enter your message">
-        <button class="closeMessageBox">註冊test2</button>
+        <div class="container">
+            <div class="title">
+                <h3>註冊</h3>
+                <div class="knownAs">
+                    <p>長者</p>
+                </div>
+                <button class="closeMessageBox" id="close" type="submit">&#x2716;</button>
+            </div>
+            <hr>
+            <form class="elder">
+                <div class="row">
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;單位名稱" required>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" placeholder="&nbsp;&nbsp;單位編號" required>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" placeholder="&nbsp;&nbsp;個案編號" required>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;個案來源" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;姓氏" required>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;名字" required>
+                    </div>
+                    <div class="col-3">
+                        <select id="gender" required>
+                            <option value="na">性別</option>
+                            <option value="male">男</option>
+                            <option value="female">女</option>   
+                        </select>             
+                    </div>
+                    <div class="col-3">
+                        <select id="educationLevel" required>
+                            <option value="na">教育程度</option>
+                            <option value="illiteracy">不識字</option>
+                            <option value="self-study">自修</option>
+                            <option value="elementary">國小</option>
+                            <option value="junior-high">國中</option>
+                            <option value="seniorORvocational-high">高中職</option>
+                            <option value="junior-college">專科</option>
+                            <option value="university">大學</option>
+                            <option value="graduate">研究所以上</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-12">
+                    <h6>出生日期</h6>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <select class="yearSelect" required></select>
+                    </div>
+                    <div class="col-3">
+                        <select class="monthSelect" required></select>
+                    </div>
+                    <div class="col-3">
+                        <select class="daySelect" required></select>
+                    </div>
+                    <div class="col-1">
+                        <select id="language" required>
+                            <option value="na">語言</option>
+                            <option value="chinese">國語</option>
+                            <option value="english">英語</option>
+                            <option value="taiwanese">台語</option>
+                            <option value="hakka">客語</option>
+                            <option value="others">其他</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select id="culture" required>
+                            <option value="na">信仰</option>
+                            <option value="taoism">道教</option>
+                            <option value="catholicism">天主教</option>
+                            <option value="christianity">基督教</option>
+                            <option value="buddhism">佛教</option>
+                            <option value="islam">伊斯蘭教</option>
+                            <option value="others">其他</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="&nbsp;&nbsp;身分證" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="password" placeholder="&nbsp;&nbsp;密碼" required>
+                    </div>
+                    <div class="col-4">
+                        <input type="password" placeholder="&nbsp;&nbsp;密碼確認" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <select id="marital-status" required>
+                            <option value="na">婚姻狀況</option>
+                            <option value="unmarried">未婚</option>
+                            <option value="married">已婚</option>
+                            <option value="live-apart">分居</option>
+                            <option value="widowed">喪偶</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;聯絡人" required>
+                    </div>
+                    <div class="col-2">
+                        <select id="relationship" required>
+                            <option value="na">聯絡人關係</option>
+                            <option value="father">父親</option>
+                            <option value="mother">母親</option>
+                            <option value="couple">夫妻</option>
+                            <option value="child">子女</option>
+                            <option value="brother">兄弟</option>
+                            <option value="sister">姐妹</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <input type="tel" placeholder="&nbsp;&nbsp;聯絡人電話" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <input type="tel" placeholder="&nbsp;&nbsp;長者居住地址" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" placeholder="&nbsp;&nbsp;聯絡人地址" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <select id="family-status" required>
+                            <option value="na">家庭狀況</option>
+                            <option value="nuclear">核心家庭</option>
+                            <option value="extended">大家庭</option>
+                            <option value="single-parent">單親家庭</option>
+                            <option value="step">繼親</option>
+                            <option value="grandparent">隔代教養</option>
+                            <option value="others">其他</option>
+                        </select>                
+                    </div>
+                    <div class="col-3">
+                        <select id="list" required>
+                            <option value="na">身份別</option>
+                            <option value="Low-income">低收入戶</option>
+                            <option value="near-poor">中低收入戶</option>
+                            <option value="normal">一般戶老人</option>
+                            <option value="solitary">獨居老人</option>
+                            <option value="handicapped">身心障礙者</option>
+                            <option value="others">其他</option>
+                        </select>                
+                    </div>
+                    <div class="col-3">
+                        <select id="list" required>
+                            <option value="na">經濟來源</option>
+                            <option value="non">無</option>
+                            <option value="child-support">子女奉養</option>
+                            <option value="government-subsidy">政府補助</option>
+                            <option value="others">其他</option>
+                        </select>      
+                    </div>
+                    <div class="col-3">
+                        <input type="text" placeholder="&nbsp;&nbsp;工作" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <select id="health" required>
+                            <option value="na">身體狀況</option>
+                            <option value="normal">正常</option>
+                            <option value="slight">輕微系統疾病但無功能障礙</option>
+                            <option value="medium">中等至嚴重程度的系統疾病且導致某些功能障礙</option>
+                            <option value="severe">嚴重程度的系統疾病且無法自理</option>
+                        </select>     
+                    </div>
+                    <div class="col-4">
+                        <select id="activity-type" required>
+                            <option value="na">活動型態</option>
+                            <option value="completely">完全自理</option>
+                            <option value="Partial">部分自理</option>
+                            <option value="completely">完全無法自理</option>
+                        </select>  
+                    </div>
+                    <div class="col-4">
+                        <select id="house-condition" required>
+                            <option value="na">屋況</option>
+                            <option value="own-residence">自有住宅</option>
+                            <option value="lease">租賃</option>
+                            <option value="crash">借住</option>
+                            <option value="temporary-housing">臨時住屋</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <h6>興趣與專長</h6>
+                        <input type="text"  class="elderBoxes" placeholder="&nbsp;&nbsp;簡短概述三項" required>
+                    </div>
+                    <div class="col-4">
+                        <h6>主觀問題</h6>
+                        <input type="text" class="elderBoxes" placeholder="&nbsp;&nbsp;簡短概述" required>
+                    </div>
+                    <div class="col-4">
+                        <h6>補充陳述</h6>
+                        <input type="text" class="elderBoxes" placeholder="&nbsp;&nbsp;簡短概述" required>
+                    </div>
+                </div>
+                <div class="eReadyToSubmit">
+                    <button class="closeMessageBox">註冊</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-</div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="RegisterScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="RegisterScript.js"></script>
 </body>
 </html>

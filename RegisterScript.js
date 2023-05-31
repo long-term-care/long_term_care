@@ -38,7 +38,7 @@ $(document).ready(function() {
     var endYear = currentYear + 112;
 
     for (var year = startYear; year <= endYear; year++) {
-        $('#yearSelect').append($('<option>', {
+        $('.yearSelect').append($('<option>', {
             value: year,
             text: year
         }));
@@ -46,14 +46,14 @@ $(document).ready(function() {
     var months = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
     $.each(months, function(index, month) {
         var monthValue = index + 1;
-        $('#monthSelect').append($('<option>', {
+        $('.monthSelect').append($('<option>', {
             value: monthValue,
             text: month
         }));
     });
     var daysInMonth = 31; 
     for (var day = 1; day <= daysInMonth; day++) {
-        $('#daySelect').append($('<option>', {
+        $('.daySelect').append($('<option>', {
             value: day,
             text: day
         }));
