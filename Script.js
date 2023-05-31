@@ -26,12 +26,12 @@ $(document).ready(function() {
      
     $('.closeMessageBox').not('#close').on('click', function() {
         closeMessageBoxBTN();
-    });
+    }); 
     // close window
     function closeMessageBox() { 
         $('#volunteerMsgBox').addClass('hidden');
         $('#elderMsgBox').addClass('hidden');
-        $('#renewPassword').addClass('hidden');
+        // $('#renewPassword').addClass('hidden');
         $('#messageBox').fadeOut();        
         $('.translucent-overlay').remove();
     }
@@ -39,7 +39,7 @@ $(document).ready(function() {
     function closeMessageBoxBTN() {
         $('#volunteerMsgBox').addClass('hidden');
         $('#elderMsgBox').addClass('hidden');
-        $('#renewPassword').addClass('hidden');
+        // $('#renewPassword').addClass('hidden');
         var inputs = $('#messageBox input');
         var allInputsWritten = true;
         inputs.each(function() {
