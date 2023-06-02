@@ -139,7 +139,7 @@ ul.Menu > li{
     width: 100%;
     height: 100%;
     background-color: rgba(169, 167, 167, 0.5); 
-    z-index: 9000; 
+    z-index: 900; 
 }
 .subtitle {
     color: #857B7B;
@@ -165,7 +165,7 @@ hr {
 .validReadyToSubmit button {
     margin: 20px;
 }
-.closeMessageBox:not(#close) {
+.closeMessageBox:not(#close), .closeMessageBoxDone {
     transition: all 0.3s ease-in-out;
     font-size: 20px;
     width: 170px;
@@ -178,11 +178,11 @@ hr {
     border: none;
     color: white;
 }
-.closeMessageBox:hover:not(#close) {
+.closeMessageBox:hover:not(#close), .closeMessageBoxDone:hover {
     transform: translateY(3px);
     box-shadow: none;
 }
-.closeMessageBox:active:not(#close) {
+.closeMessageBox:active:not(#close), .closeMessageBoxDone:active {
     opacity: 0.6;
 }
 #messageBox {
@@ -196,7 +196,7 @@ hr {
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
+    z-index: 999;
 }
 #close {
     color: gray; 
@@ -217,4 +217,16 @@ input {
 }
 input:focus {
     outline: none;
+}
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
 }
