@@ -15,21 +15,21 @@ html, body {
 .global_nav {
     display: block;
     margin: 0;
-    padding: 0 73px;
+    padding: 0;
     width: 100%;
     text-align: center;
     height: 40px;
     z-index: 2;
 }
-ul{
+ul {
     display: flex;
 }
-.Menu{
+.Menu {
     margin-top: 10px;
     float: left;
     position: relative;
 }
-ul.Menu > li{
+ul.Menu > li {
     list-style-type: none;
     padding: 10px;
     color:#FFF;
@@ -51,10 +51,10 @@ ul.Menu > li{
 }
 .LogInBox {
     position: absolute;
-    width: 463.2px;
-    height: 519.2px;
-    left: 168px;
-    top: 178px;
+    width: 330.04px;
+    height: 410.44px;
+    left: 5%;
+    top: 20%;
     background: #FFA5C0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 69px;
@@ -65,16 +65,16 @@ ul.Menu > li{
 }
 .LogIn input {
     position: relative;
-    width: 300px;
-    height: 60px;
+    width: 200px;
+    height: 50px;
     top: 40px;
     background: #FFFFFF;
     border: 1px solid #857B7B;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .LogIn input:not(.id){
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 .forget {
     color: #FFFFFF;
@@ -102,8 +102,8 @@ ul.Menu > li{
 } 
 .loginBtn, .newAccount {
     position: relative;
-    font-size: 20px;
-    width: 300px;
+    font-size: 15px;
+    width: 200px;
     height: 50px;
     border-radius: 11px;
     box-shadow: 0 20px 30px -6px rgba(69, 65, 68, 0.5);
@@ -121,13 +121,7 @@ ul.Menu > li{
     opacity: 0.5;
 }
 .content .img {
-    position: relative;
-    width: 50%;
-    float: right;
-    top: 200px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    display: none;
 }
 .hidden {
     display: none;
@@ -145,8 +139,8 @@ ul.Menu > li{
     color: #857B7B;
 }
 .large {
-    width: 50%;
-    height: 60%;
+    width: 90%;
+    height: 80%;
     border-radius: 10px;
 }
 hr {
@@ -229,4 +223,48 @@ input:focus {
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
+}
+@media screen and (width > 768px) {
+    .global_nav {
+        padding: 0 73px;
+    }
+    .content .img {
+        display: block;
+    }
+    .LogInBox {
+        width: 463.2px;
+        height: 519.2px;
+        left: 168px;
+        top: 178px;
+    }
+    .LogIn input {
+        width: 300px;
+        height: 60px;
+        top: 40px;
+        margin: 20px 0;
+    }
+    .LogIn input:not(.id){
+        margin-bottom: 80px;
+    }
+    .forget {
+        margin: 20px 0;
+    }
+    .loginBtn, .newAccount {
+        font-size: 20px;
+        width: 300px;
+        border-radius: 11px;
+    }
+    .large {
+        width: 50%;
+        height: 60%;
+    }
+    .content .img {
+        position: relative;
+        width: 50%;
+        float: right;
+        top: 200px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
 }
