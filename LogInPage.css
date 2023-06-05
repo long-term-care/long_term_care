@@ -1,8 +1,8 @@
 body {
     font-family: 'Hiragino Kaku Gothic Pro', 'WenQuanYi Zen Hei', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
 }
-h5{
-    font-size: 18px;
+i, h5{
+    font-size: 10px;
 }
 .container-fluid {
     background-color: #CBE9EA;
@@ -16,20 +16,23 @@ div.col-md-12 {
     flex-wrap: wrap;
 }
 .row1 {
-    padding: 20px 50px 0 50px;
+    padding: 1px 0 0 0;
 }
 .row2 {
-    padding: 20px 50px 20px 50px;
+    padding: 1px 0 1px 0;
+}
+div.card-body, div.card.head {
+    width: 50px;
+    height: 170px;
 }
 .row1 .card { 
-    width: 274px;
+    width: 70px;
 }
 .row2 .card {
-    width: 180px;
+    width: 45px;
 }
 .row1 .card, .row2 .card {
-    border-radius: 15px;
-    padding-top: 10px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,27 +45,65 @@ div.col-md-12 {
     background-color: #D04667;
     color: white;
 } 
+.card {
+    margin: 7px 0;
+} 
 .card:hover:not(.head) {
     transform: scale(1.06);
     transition: 0.5s;
-}
-.row1 .card .card-body h5, .row2 .card .card-body h5 {
-   padding-top: 30px;
 }
 .schedule {
     padding: 15px 0 0 15px;
     display: flex;
     background-color: #3D81BF;
     color: white;
-    width: 700px;
+    width: 300px;
 }
 .scheduleBox {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(10%, 10%);
 }
 .scheduleBox .pics {
     padding-top: 5px;
 }
-
+i {
+    font-size: 20px;
+}
+@media screen and (width > 768px){
+    h5 {
+        font-size: 18px;
+    }
+    .row1 {
+        padding: 20px 50px 0 50px;
+    }
+    .row2 {
+        padding: 20px 50px 20px 50px;
+    } 
+    div.card.head, div.card-body {
+        width: 170px;
+        height: auto;
+    }
+    .row1 .card .card-body h5, .row2 .card .card-body h5 {
+        padding-top: 30px;
+    }
+    .row1 .card { 
+        width: 274px;
+    }
+    .row2 .card {
+        width: 180px;
+    } 
+    .schedule {
+        width: 700px;
+    }
+    .scheduleBox {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+    i {
+        font-size: 60px;
+    }
+}

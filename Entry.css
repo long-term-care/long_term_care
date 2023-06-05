@@ -1,6 +1,6 @@
 body {
     font-family: 'Hiragino Kaku Gothic Pro', 'WenQuanYi Zen Hei', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
-    background-color: #CBE9EA;
+    background-color: #222831;
 }
 .wrap {
     margin: 30px;
@@ -11,28 +11,29 @@ body {
     color: #FFFFFF;
     background-color: transparent;
     border: 1px solid #FFFFFF;
-    min-height: 50px;
-    padding: 0 30px;
+    min-height: 25px;
+    padding: 0 20px;
     font-size: 17px;
     z-index: 1;
     position: relative;
-}
-.Home::before {
-    width: 50px;
-    height: 1px;
-    margin-right: 20px;
+    cursor: pointer;
 }
 .Home::before, .Home::after {
     content: "";
     background-color: #FFFFFF;
     display: block;
 }
+.Home::before {
+    width: 25px;
+    height: 1px;
+    margin-right: 20px;
+}
 .Home:hover {
-    color: #305cb9;
+    color: #222831;
     text-decoration: none;
 }
 .Home:hover::before, .Home:hover {
-    background-color: #305cb9;
+    background-color: #222831;
 }
 .Home::after {
     width: 0%;
@@ -49,31 +50,48 @@ body {
     transition: all 0.45s ease-out;
 }
 .wrap_Entry {
-    margin: auto;
+    margin-top: 20px;
     text-align: center;
 }
 .wrap_Entry > button {
-    margin: 70px;
+    margin: 55px 70px;
 }
-
 .Edit, .View {
     transition: all 0.3s ease-in-out;
-    font-size: 34px;
-    width: 280px;
-    height: 170px;
-    border-radius: 50px;
-    /* background-image: linear-gradient(135deg, #b192fe 0%, #FBD4DF 100%); */
-    background-color: #FBD4DF;
-    box-shadow: 0 20px 30px -6px rgba(64, 153, 201, 0.5);
+    font-size: 25px;
+    width: 180px;
+    height: 120px;
+    border-radius: 30px;
+    background-color: #F3B7AD;
+    box-shadow: 0 20px 30px -6px rgba(203, 233, 234, 0.4);
     outline: none;
     cursor: pointer;
     border: none;
-    color: white;
+    color: rgb(250, 250, 250);
 }
 .Edit:hover, .View:hover {
     transform: translateY(3px);
-    box-shadow: none;
+    box-shadow: 0 10px 20px -6px rgba(203, 233, 234, 0.6);
+    background-color: #FFB4A2;
 }
 .Edit:active, .View:active {
-    opacity: 0.5;
+    opacity: 0.7;
+}
+@media screen and (width > 767px) {
+    .wrap_Entry {
+        margin-top: auto;
+    }
+    .wrap_Entry > button {
+        margin: 70px;
+    }
+    .Edit, .View {
+        width: 320px;
+        height: 170px;
+        font-size: 40px;
+    }
+    .Home {
+        min-height: 50px;
+        padding: 0 30px;
+        font-size: 17px;
+    }
 }
