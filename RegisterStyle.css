@@ -132,7 +132,7 @@ hr {
 }
 input, select {
     position: relative;
-    height: 50px;
+    height: 45px;
     background: rgba(240, 236, 236, 0.68);
     border: 1px solid #686868;
     border-radius: 10px;
